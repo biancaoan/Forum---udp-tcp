@@ -1,14 +1,17 @@
 # TCP binaries
-TCP/client_tcp
-TCP/serveur_tcp
+TCP/client_tcp_forum
+TCP/serveur_tcp_forum
+Original_files_TCP_UDP/client_tcp
+Original_files_TCP_UDP/serveur_tcp
 
 # UDP binaries
-UDP/client_udp
-UDP/serveur_udp
+UDP/client_udp_forum
+UDP/serveur_udp_forum
+Original_files_TCP_UDP/client_udp
+Original_files_TCP_UDP/serveur_udp
 
 # Temporary files
 TCP/users_tmp.txt
 
 # Object files
 *.o
-

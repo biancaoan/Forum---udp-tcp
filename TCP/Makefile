@@ -1,20 +1,18 @@
-CC = gcc
-CFLAGS = -Wall -Wextra -std=c11
+CC      := gcc
+CSTD    := -std=gnu11
+CWARN   := -Wall -Wextra
+CFLAGS  := $(CSTD) $(CWARN)
 
-SERVER = serveur_tcp_forum
-CLIENT = client_tcp_forum
+all: serveur_tcp_forum client_tcp_forum
 
-SERVER_SRC = serveur_tcp_forum.c user.c
-CLIENT_SRC = client_tcp_forum.c
+serveur_tcp_forum: serveur_tcp_forum.c user.c
+	$(CC) $(CFLAGS) $^ -o $@
 
-all: $(SERVER) $(CLIENT)
-
-$(SERVER): $(SERVER_SRC)
-	$(CC) $(CFLAGS) $(SERVER_SRC) -o $(SERVER)
-
-$(CLIENT): $(CLIENT_SRC)
-	$(CC) $(CFLAGS) $(CLIENT_SRC) -o $(CLIENT)
+client_tcp_forum: client_tcp_forum.c
+	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
-	rm -f $(SERVER) $(CLIENT)
+	rm -f serveur_tcp_forum client_tcp_forum
+.PHONY: all clean
+
 

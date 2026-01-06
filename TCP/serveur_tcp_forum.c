@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
             }
             buffer[n] = '\0';
 
-            user_init(&user, buffer);
+            userInit(&user, buffer);
 
             addUsers(user.username);
 
@@ -125,7 +125,7 @@ int main(int argc, char *argv[])
                 if (n <= 0) break;
                 buffer[n] = '\0';
 
-                user_format_message(&user, buffer, line, (int)sizeof(line));
+                userMessage(&user, buffer, line, (int)sizeof(line));
 
                 forum = fopen("forum.txt", "a");
                 if (forum != NULL) {
