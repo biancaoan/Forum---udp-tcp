@@ -1,0 +1,14 @@
+# TCP binaries
+TCP/client_tcp
+TCP/serveur_tcp
+
+# UDP binaries
+UDP/client_udp
+UDP/serveur_udp
+
+# Temporary files
+TCP/users_tmp.txt
+
+# Object files
+*.o
+
